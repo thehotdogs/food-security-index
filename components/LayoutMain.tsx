@@ -1,5 +1,5 @@
-import { Layout } from 'antd';
-import Sider from 'antd/lib/layout/Sider';
+import { Layout, Anchor, Col, Row } from 'antd';
+const { Link } = Anchor;
 import React from 'react';
 
 import Navbar from './Navbar';
@@ -8,12 +8,21 @@ const { Header, Content, Footer } = Layout;
 
 function LayoutMain({ children, menuKey }: any) {
   return (
-    <Layout className="flex min-h-screen">
-      <Header>
-        <Navbar defaultSelectedKeys={menuKey} />
-      </Header>
-      <Content className="site-layout px-10 py-5">{children}</Content>
-      <Footer style={{ textAlign: 'center' }}>Ansar Ahmed, Joshua Tay, Vincentius Roger, Nathan AW, Valerie</Footer>
+    <Layout className="">
+      <div style={{ minHeight: '100vh' }}>
+        <Header>
+          <Navbar defaultSelectedKeys={menuKey} />
+        </Header>
+        <Content>
+          <div className="min-h-screen">{children}</div>
+        </Content>
+        <Footer style={{ textAlign: 'center' }}>
+          <div>Copyright Ⓒ 2022. SC06 Team 1</div>
+          <div>
+            Joshua Tay, Ansar Ahmed, Vincentius Roger, Nathan AW, Valerie
+          </div>
+        </Footer>
+      </div>
     </Layout>
   );
 }
