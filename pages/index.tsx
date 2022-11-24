@@ -79,7 +79,9 @@ function introduction() {
               features, thus allowing UN Security Council members to weigh the
               importance of assisting this country?
             </Typography.Text>
-            <Typography.Title id="final">Data choosing</Typography.Title>
+            <Typography.Title id="data-choosing">
+              Data choosing
+            </Typography.Title>
             <Typography.Text>
               Since our problem statement is to build a model to predict the
               GFSI of an arbitrary country based on its socio-economic
