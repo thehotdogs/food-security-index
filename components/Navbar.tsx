@@ -6,7 +6,8 @@ import { LogoutOutlined } from '@ant-design/icons';
 
 const pageItems = [
   { label: 'Introduction', key: '' },
-  { label: 'Data', key: 'data' }, // remember to pass the key prop
+  { label: 'Dataset', key: 'data' },
+  { label: 'Plot', key: 'plot' }, // remember to pass the key prop
   { label: 'Food Security Calculator', key: 'calculator' }, // which is requir
   { label: 'About The Team', key: 'about' },
 ];

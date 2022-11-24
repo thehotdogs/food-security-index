@@ -24,7 +24,7 @@ function calculator() {
   const [countryDetail, setCountryDetail] = useState([]);
   const { parsedCsvData, header } = useExcelData();
   const [form] = Form.useForm();
-  console.log(parsedCsvData, header);
+  //console.log(parsedCsvData, header);
   const DemoGauge = () => {
     const config = {
       percent: percentage,
@@ -101,11 +101,10 @@ function calculator() {
 
     return (
       <div className="flex flex-col items-center">
-        <div>
+        <div className="w-full">
           <Typography.Text className="pr-3">Insert country :</Typography.Text>
 
           <AutoComplete
-            style={{ width: 400 }}
             options={countryList}
             placeholder="e.g. Indonesia"
             filterOption={(inputValue, option) =>
@@ -121,11 +120,10 @@ function calculator() {
           <></>
         ) : (
           <Table
-            className="my-5"
+            className="my-5 lg:w-96 lg:h-96 min-h-screen min-w-screen"
             pagination={false}
             dataSource={countryDetail}
             columns={columns}
-            style={{ minHeight: '40rem', minWidth: '40rem' }}
           />
         )}
       </div>
@@ -152,7 +150,7 @@ function calculator() {
         1.124 * values['vac'] +
         16.71 * Math.log(values['export']);
 
-      console.log(values, result);
+      //console.log(values, result);
       setPercentage(result / 1000);
     };
     const generateRandom = () => {
@@ -244,7 +242,7 @@ function calculator() {
             <DemoGauge />
           </Col>
         </Row> */}
-        <div className="w-90 h-90">
+        <div className="w-full h-full lg:w-3/12 lg:h-3/12">
           <DemoGauge />
         </div>
 
